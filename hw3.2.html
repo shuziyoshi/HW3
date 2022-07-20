@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Option From Array</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <select id="select">
+            <option value="default">Choose one</option>
+        </select>
+        
+        <script>
+            
+            const dropDownList = [
+        { value: "newark", content: "Newark" },
+        { value: "santaClara", content: "Santa Clara" },
+        { value: "unionCity", content: "Union City" },
+        { value: "albany", content: "Albany" },
+        { value: "dalyCity", content: "Daly City" },
+        { value: "sanJose", content: "San Jose" },
+      ];
+
+      for (var i = 0; i < dropDownList.length; i++) {
+        var option = document.createElement("OPTION"),
+          txt = document.createTextNode(dropDownList[i].content);
+        option.appendChild(txt);
+        option.setAttribute("value", dropDownList[i].value);
+        select.insertBefore(option, select.lastChild);
+      }
+
+    </script>
+           
+           
+         
+     
+
+    </body>
+</html>

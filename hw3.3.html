@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!--The container where I'll add the dynamic ul and li elements.-->
+    <div id="container"></div>
+
+    <script>
+      var arr = ["HTML", "JavaScript", "CSS", "React", "Redux", "Java"];
+      var cont = document.getElementById("container");
+
+      // create ul element and set the attributes.
+      var ul = document.createElement("ul");
+
+      for (i = 0; i <= arr.length; i++) {
+        var li = document.createElement("li"); // create li element.
+        li.innerHTML = arr[i]; // assigning text to li using array value.
+
+        ul.appendChild(li); // append li to ul.
+      }
+
+      cont.appendChild(ul); // add list to the container.
+
+      var ul = document.createElement("ul");
+    </script>
+
+    <div id="list">
+
+    <script>
+         var arr2 = ["HTML", "JavaScript", "CSS", "React", "Redux", "Java"];
+         var cont = document.getElementById("list");
+
+         function arrToUl(arr2) {
+  var div = document.getElementById('list');
+  var ol = document.createElement('ol');
+
+  for (var i = 0; i < arr2.length; i++) {
+
+    if (arr2[i] instanceof Array) {
+      var list = arrToUl(arr2[i]);
+    } else {
+      var li = document.createElement('li');
+      li.appendChild(document.createTextNode(arr2[i]));
+      console.log(ol.appendChild(li));
+    }
+    div.appendChild(ol);
+  }
+}
+
+arrToUl(arr2);
+
+    </script>
+  </body>
+</html>
